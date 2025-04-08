@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208513584744986004}
   - component: {fileID: 6904330812266112034}
+  - component: {fileID: -3047986154467396283}
   m_Layer: 0
   m_Name: Sticks
   m_TagString: Untagged
@@ -78,6 +79,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96039003, y: 1.181793}
   m_EdgeRadius: 0
+--- !u!114 &-3047986154467396283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697805796509036334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665c61b7c0a9ba148877a5ed179aafa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointForUpgrade: {fileID: 0}
+  isUsing: 0
 --- !u!1 &1207563955728184837
 GameObject:
   m_ObjectHideFlags: 0

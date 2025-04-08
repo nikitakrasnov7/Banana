@@ -9,13 +9,9 @@ public class DragObject : MonoBehaviour
     public bool isUsing = false;
 
 
-    //private void OnEnable()
-    //{
-
-    //    PointForUpgrade.SetActive(true);
-    //}
     private void Update()
     {
+
         if (isUsing)
         {
             if (Input.touchCount == 1)

@@ -6,11 +6,11 @@ public class CameraMovement : MonoBehaviour
 {
     float speed = 5f;
 
-    private bool isMove = false;
+    private bool isMove = true;
 
     private void Update()
     {
-        if (isMove)
+        if (PlayerController.Instance.ActiveUpgrade == null)
         {
             if (Input.touchCount == 1)
             {

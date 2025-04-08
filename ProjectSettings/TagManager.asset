@@ -9,6 +9,7 @@ TagManager:
   - Part
   - Ground
   - Testing
+  - Testing2
   layers:
   - Default
   - TransparentFX

@@ -8,7 +8,12 @@ public class ChangingParametersWheels : MonoBehaviour
     {
         if(other.tag == "Testing")
         {
-            PlayerController.Instance.ChangingParametrsCar(600, 550);
+            PlayerController.Instance.ChangingParametrsCar(600, 600);
+        }
+        if (other.tag == "Testing2")
+        {
+            //PlayerController.Instance.isGroundedWheel();
+            PlayerController.Instance.ChangingParametrsCar(300, 100);
         }
     }
 }

@@ -48,7 +48,12 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        isGroundedWheel();
+        //isGroundedWheel();
+        Debug.Log(RightBackWheel.motorTorque.ToString() + " " +
+        RightFrontWheel.motorTorque.ToString() + " " +
+        LeftBackWheel.motorTorque.ToString() + " " +
+        LeftFrontWheel.motorTorque.ToString());
+
     }
 
     public void InstallingUpgrade(GameObject obj, Vector2 pointPosition)
@@ -84,17 +89,20 @@ public class PlayerController : MonoBehaviour
         LeftFrontWheel.motorTorque = motor;
     }
 
-    private void isGroundedWheel()
+    public void isGroundedWheel()
     {
         if (RightBackWheel.isGrounded &&
-            LeftBackWheel.isGrounded)
+            LeftBackWheel.isGrounded &&
+            RightFrontWheel.isGrounded &&
+            LeftFrontWheel.isGrounded)
         {
+
             Debug.Log("все колеса на земле");
         }
         else
         {
 
-            ChangingParametrsCar(300, 0);
+
             Debug.Log(" не все колеса на земле");
         }
     }
