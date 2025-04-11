@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.Properties;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,13 +15,18 @@ public class PlayerController : MonoBehaviour
 
     public GameObject ActiveUpgrade;
     public GameObject Ground;
-    
+
     public bool isActiveNewUpgrade = false;
 
     public bool isGrounded;
     public Vector3 groundNormal;
 
 
+    public WheelCollider RightFrontWheel;
+    public WheelCollider RightBackWheel;
+
+    public WheelCollider LeftFrontWheel;
+    public WheelCollider LeftBackWheel;
 
     //UI
     public GameObject StartGameButton;
@@ -40,7 +46,15 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        //isGroundedWheel();
+        Debug.Log(RightBackWheel.motorTorque.ToString() + " " +
+        RightFrontWheel.motorTorque.ToString() + " " +
+        LeftBackWheel.motorTorque.ToString() + " " +
+        LeftFrontWheel.motorTorque.ToString());
 
+    }
 
     public void InstallingUpgrade(GameObject obj, Vector2 pointPosition)
     {
@@ -51,7 +65,7 @@ public class PlayerController : MonoBehaviour
     {
         PlayerCar.GetComponent<Rigidbody>().isKinematic = false;
         Rigidbody[] list = PlayerCar.transform.GetComponentsInChildren<Rigidbody>();
-        for (int i = 0; i < list.Length; i++) 
+        for (int i = 0; i < list.Length; i++)
         {
             list[i].isKinematic = false;
         }
@@ -63,5 +77,33 @@ public class PlayerController : MonoBehaviour
     public void ActivationButtonStart()
     {
         StartGameButton.SetActive(true);
+    }
+
+    public void ChangingParametrsCar(int mass, int motor)
+    {
+        PlayerCar.GetComponent<Rigidbody>().mass = mass;
+
+        RightBackWheel.motorTorque = motor;
+        RightFrontWheel.motorTorque = motor;
+        LeftBackWheel.motorTorque = motor;
+        LeftFrontWheel.motorTorque = motor;
+    }
+
+    public void isGroundedWheel()
+    {
+        if (RightBackWheel.isGrounded &&
+            LeftBackWheel.isGrounded &&
+            RightFrontWheel.isGrounded &&
+            LeftFrontWheel.isGrounded)
+        {
+
+            Debug.Log("все колеса на земле");
+        }
+        else
+        {
+
+
+            Debug.Log(" не все колеса на земле");
+        }
     }
 }

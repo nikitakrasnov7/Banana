@@ -12,6 +12,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        rigidbody.AddForce(transform.forward * 300, ForceMode.Impulse);
+        
     }
 }

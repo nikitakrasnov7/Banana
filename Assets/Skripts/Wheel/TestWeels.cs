@@ -7,14 +7,9 @@ public class TestWeels : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerController.Instance.ChangingParametrsCar(300, 50);
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
-        gameObject.GetComponent<WheelCollider>().motorTorque = 10000f;
-
-
-    }
+ 
 }

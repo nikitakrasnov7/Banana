@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7533860418691854512}
   - component: {fileID: 6501304879257675356}
+  - component: {fileID: 7142346427724619458}
   m_Layer: 0
   m_Name: Shelf
   m_TagString: Untagged
@@ -52,8 +53,22 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 8.295975, y: 0.3569653, z: 1}
+  m_Size: {x: 8.295975, y: 4.28, z: 1}
   m_Center: {x: -0.012367249, y: 0.8408917, z: 0}
+--- !u!114 &7142346427724619458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7533860418691854519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665c61b7c0a9ba148877a5ed179aafa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointForUpgrade: {fileID: 0}
+  isUsing: 0
 --- !u!1001 &3765962322871811104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100,7 +115,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 941b9db308561204393d1e972b3e0406,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 941b9db308561204393d1e972b3e0406,
         type: 3}
@@ -110,12 +125,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 941b9db308561204393d1e972b3e0406,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 941b9db308561204393d1e972b3e0406,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 941b9db308561204393d1e972b3e0406,
         type: 3}
@@ -125,7 +140,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 941b9db308561204393d1e972b3e0406,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 941b9db308561204393d1e972b3e0406,
         type: 3}
